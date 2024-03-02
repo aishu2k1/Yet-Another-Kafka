@@ -31,7 +31,8 @@ type Subscribe_Message struct {
 }
 
 func Write_to_Topic(t Topic) string{
-	path := "/Users/aishwaryaharinivas/Desktop/Projects/Yet Another Kafka/Kafka Code/cluster/broker/topics/"+t.Topic_name
+	// replace the path below with your system's path to topics folder
+	path := "Path to topics"+t.Topic_name
 	_, err := os.Stat(path)
 	if err != nil {
 		p.Print("Topic doesn't exist... Creating topic ")
@@ -57,7 +58,8 @@ func Write_to_Topic(t Topic) string{
 }
 
 func Read_from_Topic(Topic_name string) (string, error) {
-	path := "/Users/aishwaryaharinivas/Desktop/Projects/Yet Another Kafka/Kafka Code/cluster/broker/topics/"+Topic_name
+	// replace the path below with your system's path to topics folder
+	path := "Path to topics"+Topic_name
 	_, err := os.Stat(path)
 	filename := path+"/"+Topic_name+".txt"
 	if err != nil {
